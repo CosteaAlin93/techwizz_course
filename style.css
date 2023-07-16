@@ -1,0 +1,396 @@
+/* Border box */
+/* industrial standard. Period. Use it */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: var(--color-dark-gray);
+}
+
+/* Position */
+
+/* Setting of variables */
+:root {
+  --color-dark-gray: #111111;
+  --color-light-yellow: #fbf8cc;
+  --color-yellow: #f5ee84;
+}
+
+/* ==================== */
+/* Units
+Absolute units: we will use only px
+Relative units: rem, vw (viewport width), vh (viewport height) , % */
+
+body {
+  /* change this, and all cascading styles will auto update if they are set with rem */
+  font-size: 1rem;
+}
+/* h1 { */
+/* 1rem is 1 size of the size of the root font selector */
+/* rem - recommended because with it, all is relative >> all changes instantly if root size changes */
+/* font-size: 1rem;
+  background-color: aqua; */
+/* this takes the whole viewport */
+/* width: 50vw; */
+/* % use the size of the parent */
+/* width: 50%;
+  height: 20vh;
+} */
+
+/* ==================== */
+/* element selector */
+body {
+  background-color: var(--color-light-yellow);
+  /* color affects the color of the text */
+  color: var(--color-dark-gray);
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+}
+
+/* ==================== */
+/* Apply to all paragraphs
+p {
+  font-size: 26px;
+} */
+
+/* ==================== */
+/* id selector */
+/* id - unique;this style can be applied to only 1 element */
+/* #paragraph {
+  font-size: 26px;
+} */
+
+/* ==================== */
+/* classes */
+.paragraph {
+  margin-bottom: 1rem;
+}
+
+.list-items li {
+  margin-left: 15rem;
+  margin-bottom: 2rem;
+}
+
+.list-items li:first-child {
+  margin-top: 5rem;
+}
+.list-items li p {
+  padding-bottom: 0.5rem;
+}
+
+/* ==================== */
+/* Specificity: what happens when you apply a rule 
+    1) css files are read from top to bottom, so lower styles in the page can get applied first
+    2) elements
+    3) classes
+    4) id's
+    5) inline style - not recommended, just FYI
+    6) !important -  you should not use it, no way to overwrite
+
+
+
+     */
+/* DOM - glue between HTML and browsers */
+/* h1 {
+  color: red;
+} */
+
+/* id has bigger specificity than an class */
+/* #frontend {
+  color: orange;
+} */
+
+/* class has bigger specificity than an element */
+/* .title {
+  color: purple;
+} */
+
+/* h1 { */
+/* important overwrites everything!!! */
+/* color: green !important;
+  color: blue;
+} */
+
+/* * {
+  color: green;
+} */
+
+/* ==================== */
+/* Display */
+.hello {
+  /* class applied on the h5 with Hi,I'm Alin content */
+  /* will take it's parent 100% width */
+  display: block;
+  /* some elements are inline by default */
+  /* inline: element takes only the needed space, the next one can be placed on the same line if it is also inline */
+  /* display: inline;
+  display: flex; */
+  margin: 8px 0;
+  width: 15rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.button-wrapper {
+  margin-top: 1rem;
+  position: relative;
+  display: inline-table;
+}
+
+.button-wrapper:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.button-background {
+  background-color: var(--color-yellow);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 4px;
+  left: 4px;
+}
+
+.resume-button {
+  background-color: transparent;
+  padding: 0.4rem 0.8rem;
+
+  border: 1px solid var(--color-dark-gray);
+  border-radius: 0.4rem;
+}
+
+/* ==================== */
+/* Flexbox */
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 1.5rem;
+  /* the space inside an element */
+  padding: 1rem 2rem;
+  position: fixed;
+  background-color: var(--color-light-yellow);
+  width: 100%;
+  /* z-index: use it when some absolute elements might mess up the flow */
+  z-index: 2;
+}
+
+.skills {
+  /* list-style-type: none; */
+  margin-top: 1.5rem;
+  margin-left: 15rem;
+}
+
+.skills li {
+  margin-bottom: 2rem;
+}
+
+/* .navigation a {
+  width: 0px;
+} */
+
+/* ==================== */
+/* Margins */
+
+section {
+  margin-bottom: 6rem;
+}
+
+.landing-section {
+  /* the space outside of an element */
+  /* margin: top, right, bottom, left; */
+  /* margin: 128px 300px; top-bottom left-right */
+  margin-top: 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ==================== */
+/* font-size */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1;
+}
+
+h5 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1;
+}
+strong {
+  font-weight: 600;
+}
+
+/* ==================== */
+/* width */
+/* if not needed, do not set a fixed width to an element */
+.profile-picture {
+  width: 260px;
+}
+
+.container {
+  max-width: 996px;
+  padding: 2rem;
+}
+/* ==================== */
+/* pseudo selectors */
+#about::selection {
+  background-color: blue;
+}
+
+/* #about::first-letter {
+  background-color: blue;
+  border-radius: 50%;
+  padding: 1rem;
+} */
+/* 
+#about:hover {
+  background-color: red;
+} */
+
+/* ==================== */
+/* cursor */
+#about {
+  cursor: pointer;
+}
+
+/* ==================== */
+/* border */
+#about {
+  /* border is the shorthand for
+  border-width, border-style, border-color */
+  /* border: 5px red; */
+  /* border-style: outset;
+  border-radius: 1rem;
+  border-top-right-radius: 0; */
+  margin-bottom: 2rem;
+}
+
+/* ==================== */
+.parent {
+  width: 300px;
+  height: 300px;
+  border: 5px solid black;
+}
+.child {
+  margin-top: 120px;
+  width: 100%;
+  height: 100px;
+  border: 5px solid red;
+}
+
+/* ==================== */
+/* opacity */
+.profile-picture {
+  opacity: 80%;
+  /* border: 2.5px solid var(--color-dark-gray); */
+  border-radius: 50%;
+  width: 260px;
+  height: 260px;
+  object-fit: fill;
+}
+
+/* ==================== */
+/* Positions: relative and absolute */
+/* the absolute positioned element is positioned according to the parent element which has relative positioning */
+.profile-picture-wrapper {
+  position: relative;
+  width: 260px;
+}
+
+.slashes {
+  position: absolute;
+  top: 190px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.profile-picture-border {
+  width: 260px;
+  height: 260px;
+  border: 1px solid var(--color-dark-gray);
+  border-radius: 50%;
+  position: absolute;
+  top: 8px;
+  left: -8px;
+}
+
+.plus1,
+.plus2,
+.plus3 {
+  position: absolute;
+  top: 0px;
+  font-weight: 500;
+  font-size: 24px;
+}
+.plus1 {
+  top: 16px;
+  right: 16px;
+}
+
+.plus2 {
+  top: 8px;
+  right: 32px;
+}
+
+.plus3 {
+  top: 0px;
+  right: 16px;
+}
+
+/* Contact */
+
+#contact h1 {
+  margin-bottom: 3rem;
+}
+
+#contact img {
+  width: 220px;
+  height: 220px;
+}
+
+.contact-section {
+  display: flex;
+  gap: 2rem;
+  line-height: 1.5;
+}
+
+.contact-section-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-section-text a:first-of-type {
+  margin-top: 4rem;
+}
+
+.contact-section-text a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ==================== */
+/* Responsive design */
+/* This gets applied only if max-width is smaller than 576 */
+@media (max-width: 576px) {
+  .landing-section {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+/* ==================== */
+
+/* ==================== */
+
+/* ==================== */
+
+/* ==================== */

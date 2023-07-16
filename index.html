@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Course</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navigation">
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="top">Contacts</a>
+    </nav>
+    <div class="container">
+      <section class="landing-section">
+        <div class="landing-section-text">
+          <!-- div should only be used when another semantic element is not found for the wanted purpose -->
+          <!-- SEO: everything you have in the H1 is really important, put meaningful content inside -->
+          <h5 class="hello">Hi, I'm Alin,</h5>
+          <h1 id="frontend" class="hello">Frontend Engineer</h1>
+          <h5>based in Germany</h5>
+          <div class="button-wrapper">
+            <div class="button-background"></div>
+            <button class="resume-button">Resume</button>
+          </div>
+        </div>
+        <div class="profile-picture-wrapper">
+          <img src="zugspitze-im-sommer.jpg" class="profile-picture" alt="a picture of me" />
+          <div class="slashes">/////</div>
+          <div class="profile-picture-border"></div>
+          <div class="plus1">+</div>
+          <div class="plus2">+</div>
+          <div class="plus3">+</div>
+        </div>
+      </section>
+      <section class="">
+        <h1 id="about">about.</h1>
+        <p class="paragraph">
+          My job is to share my knowledge and teach you everything you need to know to get your fir job as a
+          Frontend engineer.
+        </p>
+        <p class="paragraph">
+          The knowledge I got from working in various environments, from corps, over banks all the way to
+          startups and agencies gave me the privileged knowledge I must transfer to you. You deserve the best.
+        </p>
+        <ul class="list-items">
+          <li>
+            <p><strong>2020 - now</strong></p>
+            <p>Frontend Engineer, Orbital Witness, London</p>
+          </li>
+
+          <li>
+            <p><strong>2018 - 2020</strong></p>
+            <p>Frontend Engineer, Infinum, New York City</p>
+          </li>
+          <li>
+            <p><strong>2017 - 2018</strong></p>
+            <p>Frontend Engineer, OptimIT, ZAgreb</p>
+          </li>
+          <li>
+            <p><strong>2017 - 2017</strong></p>
+            <p>Frontend Engineer, Asseco, Zagreb</p>
+          </li>
+          <li>
+            <p><strong>2015 - 2015</strong></p>
+
+            <p>Fullstack Engineering Internship, OptimIT, Zagreb</p>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h1>skills.</h1>
+        <ul class="skills">
+          <li>Html</li>
+          <li>Css</li>
+          <li>Javascript</li>
+          <li>React</li>
+          <li>Git</li>
+        </ul>
+      </section>
+      <section id="contact">
+        <h1>contact.</h1>
+        <div class="contact-section">
+          <div class="contact-section-image">
+            <img src="20201115_160641.jpg" alt="contact" />
+          </div>
+          <div class="contact-section-text">
+            <p>Check my profiles on LinkedIn, Twitter and TikTok or contact me via email.</p>
+            <p>It's so nice to hear from you!</p>
+
+            <a target="_blank" href="mailto:dvidovici91@gmail.com" rel="noopener noreferrer"
+              >dvidovici91@gmail.com</a
+            >
+            <a target="_blank" href="www.twitter.com/domagojvidovicc" rel="noopener noreferrer">Twitter</a>
+            <a target="_blank" href="www.tiktok.com/@javascript_wizz" rel="noopener noreferrer">Tiktok</a>
+            <a target="_blank" href="www.linkedin.com/in/domagojvidovicc" rel="noopener noreferrer"
+              >Linkedin</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- <section>
+        <div class="parent">
+          <div class="child">understand box sizing</div>
+        </div>
+      </section> -->
+
+      <!-- <a href="https://www.tiktok.com">TikTok</a>
+    <a href="https://www.twitter.com " target="_blank" rel="noopener noreferrer ">Twitter</a>
+    always use alt on img tags -->
+
+      <!-- table -->
+      <!-- <table>
+      <th>test</th>
+      <th>texst</th>
+      <tr>
+        <td>Name</td>
+        <td>Age</td>
+      </tr>
+      <tr>
+        <td>Name</td>
+        <td>Age</td>
+      </tr>
+    </table> -->
+      <hr />
+      <form action="" id="contact">
+        <!-- label and input checkbox go hand in hand -->
+        <!-- the ID on the input, makes the label clickable too, in order to check the box -->
+        <!--  -->
+        <label for="firstName">First Name</label>
+        <input type="text" name="firstName" id="firstName" placeholder="First Name" />
+        <!--  -->
+        <label for="lastName">Last Name</label>
+        <input type="text" name="lastName" id="lastName" placeholder="Last Name" />
+        <!--  -->
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Email" />
+        <!--  -->
+        <select name="level" id="">
+          <option value="1">Junior</option>
+          <option value="2">Middle</option>
+          <option value="3">Senior</option>
+        </select>
+
+        <label for="isOver18">Is over 18</label>
+        <input type="checkbox" name="isOver18" id="isOver18" />
+        <!--  -->
+        <!-- both radio inputs have the same name, so only 1 can be selected -->
+        <label for="overage">Yes</label>
+        <input type="radio" name="overage" id="overage" value="yes" />
+        <label for="overage">No</label>
+        <input type="radio" name="overage" id="overage" value="no" />
+
+        <button>Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
